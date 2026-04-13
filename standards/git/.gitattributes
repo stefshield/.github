@@ -9,9 +9,7 @@
 * text=auto eol=lf
 
 
-# ---------------------------
 # Binary files
-# ---------------------------
 *.png       binary
 *.jpg       binary
 *.jpeg      binary
@@ -35,26 +33,22 @@
 *.eot       binary
 
 
-# ---------------------------
 # Diff improvements
-# ---------------------------
 *.md        diff=markdown
 *.java      diff=java
 
 
-# ---------------------------
 # GitHub Linguist overrides
-# ---------------------------
-
+#
 # vendored dependencies
 # node_modules/**  linguist-vendored
 # vendor/**        linguist-vendored
-
+#
 # generated output
 # dist/**          linguist-generated
 # build/**         linguist-generated
 # *.min.js         linguist-generated
 # *.min.css        linguist-generated
-
+#
 # documentation
 # docs/**          linguist-documentation
