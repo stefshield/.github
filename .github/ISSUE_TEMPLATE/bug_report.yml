@@ -1,8 +1,7 @@
 name: Bug Report
-description: File a bug report.
+description: Report a problem or unexpected behavior
 title: "[Bug]: "
-labels: ["bug"]
-projects: []
+labels: [ "bug" ]
 assignees:
   - hstefanov1
 type: bug
@@ -11,13 +10,13 @@ body:
     attributes:
       value: |
         Thank you for taking the time to fill out this bug report!
-  
+
   - type: input
     id: contact
     attributes:
-      label: Contact Details
+      label: Contact details
       description: How can we get in touch with you if we need more info?
-      placeholder: e.g., email@example.com
+      placeholder: e.g., email@example.com or GitHub username
     validations:
       required: false
 
@@ -29,18 +28,30 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical (system crash / data loss)
+        - High (major feature broken)
+        - Medium (unexpected behavior)
+        - Low (cosmetic issue)
+    validations:
+      required: true
+
   - type: textarea
     id: steps-to-reproduce
     attributes:
-      label: Steps to Reproduce
+      label: Steps to reproduce
       description: Provide a minimal set of steps to reproduce the issue.
     validations:
       required: true
-  
+
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected Behavior
+      label: Expected behavior
       description: What did you expect to happen?
     validations:
       required: true
@@ -48,7 +59,7 @@ body:
   - type: textarea
     id: actual-behavior
     attributes:
-      label: Actual Behavior
+      label: Actual behavior
       description: What actually happened?
     validations:
       required: true
@@ -72,10 +83,10 @@ body:
       required: true
 
   - type: input
-    id: environment
+    id: runtime
     attributes:
-      label: Environment
-      description: What is your environment? (optional)
+      label: Runtime
+      description: What is your runtime?
       placeholder: e.g., Node 20, Java 21
     validations:
       required: false
@@ -83,23 +94,25 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: Relevant log output or stack traces
+      description: |
+        Paste logs or stack traces here.
+        They will be automatically formatted.
+        Please remove sensitive data.
       render: shell
+
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Upload screenshots / files
+      description: Paste screenshots or drag & drop files here.
+    validations:
+      required: false
 
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/stefshield/.github/blob/main/CODE_OF_CONDUCT.md).
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: I agree to follow the project [Code of Conduct](https://github.com/stefshield/.github/blob/main/CODE_OF_CONDUCT.md)
           required: true
-
-  - type: upload
-    id: screenshots
-    attributes:
-      label: Upload screenshots
-      description: If applicable, add screenshots to help explain your problem.
-    validations:
-      required: false
