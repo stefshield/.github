@@ -6,16 +6,6 @@ assignees:
   - hstefanov1
 type: feature
 body:
-
-  - type: input
-    id: contact
-    attributes:
-      label: Contact details
-      description: How can we get in touch with you if we need more info?
-      placeholder: e.g., email@example.com or GitHub username
-    validations:
-      required: false
-
   - type: textarea
     id: summary
     attributes:
