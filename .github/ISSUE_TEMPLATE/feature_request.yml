@@ -31,6 +31,14 @@ body:
       required: true
 
   - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: A checklist of conditions that must be met for this feature to be considered complete.
+    validations:
+      required: true
+
+  - type: textarea
     id: alternatives-considered
     attributes:
       label: Alternatives considered
