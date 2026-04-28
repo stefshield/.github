@@ -2,7 +2,7 @@
 
 <!-- What does this PR do? Briefly explain the change and its motivation. -->
 
-<!-- Link related issues (e.g. Closes #123) -->
+<!-- Link the related issues (e.g., Closes #123) -->
 Closes #
 
 ## Type of Change
