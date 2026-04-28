@@ -28,18 +28,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: severity
-    attributes:
-      label: Severity
-      options:
-        - Critical (system crash / data loss)
-        - High (major feature broken)
-        - Medium (unexpected behavior)
-        - Low (cosmetic issue)
-    validations:
-      required: true
-
   - type: textarea
     id: steps-to-reproduce
     attributes:
@@ -61,6 +49,19 @@ body:
     attributes:
       label: Actual behavior
       description: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How do you classify the severity of this issue?
+      options:
+        - Critical (system crash / data loss)
+        - High (major feature broken)
+        - Medium (unexpected behavior)
+        - Low (cosmetic issue)
     validations:
       required: true
 
